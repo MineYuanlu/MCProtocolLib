@@ -1,5 +1,6 @@
 package com.github.steveice10.mc.protocol.data;
 
+
 import com.github.steveice10.mc.protocol.data.game.BossBarAction;
 import com.github.steveice10.mc.protocol.data.game.BossBarColor;
 import com.github.steveice10.mc.protocol.data.game.BossBarDivision;
@@ -89,9 +90,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class MagicValues {
-    private static final Map<Object, List<Object>> values = new HashMap<Object, List<Object>>();
 
+public class MagicValues {
+    
+    private static final Map<Object, List<Object>> values = new HashMap<Object, List<Object>>();
+    
     static {
         register(AttributeType.GENERIC_MAX_HEALTH, "generic.maxHealth");
         register(AttributeType.GENERIC_FOLLOW_RANGE, "generic.followRange");
@@ -105,7 +108,7 @@ public class MagicValues {
         register(AttributeType.GENERIC_FLYING_SPEED, "generic.flyingSpeed");
         register(AttributeType.HORSE_JUMP_STRENGTH, "horse.jumpStrength");
         register(AttributeType.ZOMBIE_SPAWN_REINFORCEMENTS, "zombie.spawnReinforcements");
-
+        
         register(ModifierType.CREATURE_FLEE_SPEED_BONUS, UUID.fromString("E199AD21-BA8A-4C53-8D13-6182D5C69D3A"));
         register(ModifierType.ENDERMAN_ATTACK_SPEED_BOOST, UUID.fromString("020E0DFB-87AE-4653-9556-831010E291A0"));
         register(ModifierType.SPRINT_SPEED_BOOST, UUID.fromString("662A6B8D-DA3E-4C1C-8813-96EA6097278D"));
@@ -128,11 +131,11 @@ public class MagicValues {
         register(ModifierType.CHESTPLATE_MODIFIER, UUID.fromString("9F3D476D-C118-4544-8365-64846904B48E"));
         register(ModifierType.HELMET_MODIFIER, UUID.fromString("2AD3F246-FEE1-4E67-B886-69FD380BB150"));
         register(ModifierType.COVERED_ARMOR_BONUS, UUID.fromString("7E0292F2-9434-48D5-A29F-9583AF7DF27F"));
-
+        
         register(ModifierOperation.ADD, 0);
         register(ModifierOperation.ADD_MULTIPLIED, 1);
         register(ModifierOperation.MULTIPLY, 2);
-
+        
         register(MetadataType.BYTE, 0);
         register(MetadataType.INT, 1);
         register(MetadataType.FLOAT, 2);
@@ -149,17 +152,17 @@ public class MagicValues {
         register(MetadataType.BLOCK_STATE, 13);
         register(MetadataType.NBT_TAG, 14);
         register(MetadataType.PARTICLE, 15);
-
+        
         register(HandshakeIntent.STATUS, 1);
         register(HandshakeIntent.LOGIN, 2);
-
+        
         register(ClientRequest.RESPAWN, 0);
         register(ClientRequest.STATS, 1);
-
+        
         register(ChatVisibility.FULL, 0);
         register(ChatVisibility.SYSTEM, 1);
         register(ChatVisibility.HIDDEN, 2);
-
+        
         register(PlayerState.START_SNEAKING, 0);
         register(PlayerState.STOP_SNEAKING, 1);
         register(PlayerState.LEAVE_BED, 2);
@@ -169,11 +172,11 @@ public class MagicValues {
         register(PlayerState.STOP_HORSE_JUMP, 6);
         register(PlayerState.OPEN_HORSE_INVENTORY, 7);
         register(PlayerState.START_ELYTRA_FLYING, 8);
-
+        
         register(InteractAction.INTERACT, 0);
         register(InteractAction.ATTACK, 1);
         register(InteractAction.INTERACT_AT, 2);
-
+        
         register(PlayerAction.START_DIGGING, 0);
         register(PlayerAction.CANCEL_DIGGING, 1);
         register(PlayerAction.FINISH_DIGGING, 2);
@@ -181,7 +184,7 @@ public class MagicValues {
         register(PlayerAction.DROP_ITEM, 4);
         register(PlayerAction.RELEASE_USE_ITEM, 5);
         register(PlayerAction.SWAP_HANDS, 6);
-
+        
         register(WindowAction.CLICK_ITEM, 0);
         register(WindowAction.SHIFT_CLICK_ITEM, 1);
         register(WindowAction.MOVE_TO_HOTBAR_SLOT, 2);
@@ -189,13 +192,13 @@ public class MagicValues {
         register(WindowAction.DROP_ITEM, 4);
         register(WindowAction.SPREAD_ITEM, 5);
         register(WindowAction.FILL_STACK, 6);
-
+        
         register(ClickItemParam.LEFT_CLICK, 0);
         register(ClickItemParam.RIGHT_CLICK, 1);
-
+        
         register(ShiftClickItemParam.LEFT_CLICK, 0);
         register(ShiftClickItemParam.RIGHT_CLICK, 1);
-
+        
         register(MoveToHotbarParam.SLOT_1, 0);
         register(MoveToHotbarParam.SLOT_2, 1);
         register(MoveToHotbarParam.SLOT_3, 2);
@@ -205,14 +208,14 @@ public class MagicValues {
         register(MoveToHotbarParam.SLOT_7, 6);
         register(MoveToHotbarParam.SLOT_8, 7);
         register(MoveToHotbarParam.SLOT_9, 8);
-
+        
         register(CreativeGrabParam.GRAB, 2);
-
+        
         register(DropItemParam.LEFT_CLICK_OUTSIDE_NOT_HOLDING, 0);
         register(DropItemParam.RIGHT_CLICK_OUTSIDE_NOT_HOLDING, 1);
         register(DropItemParam.DROP_FROM_SELECTED, 2);
         register(DropItemParam.DROP_SELECTED_STACK, 3);
-
+        
         register(SpreadItemParam.LEFT_MOUSE_BEGIN_DRAG, 0);
         register(SpreadItemParam.LEFT_MOUSE_ADD_SLOT, 1);
         register(SpreadItemParam.LEFT_MOUSE_END_DRAG, 2);
@@ -222,27 +225,27 @@ public class MagicValues {
         register(SpreadItemParam.MIDDLE_MOUSE_BEGIN_DRAG, 8);
         register(SpreadItemParam.MIDDLE_MOUSE_ADD_SLOT, 9);
         register(SpreadItemParam.MIDDLE_MOUSE_END_DRAG, 10);
-
+        
         register(FillStackParam.FILL, 0);
-
+        
         register(MessageType.CHAT, 0);
         register(MessageType.SYSTEM, 1);
         register(MessageType.NOTIFICATION, 2);
-
+        
         register(CombatState.ENTER_COMBAT, 0);
         register(CombatState.END_COMBAT, 1);
         register(CombatState.ENTITY_DEAD, 2);
-
+        
         register(GameMode.SURVIVAL, 0);
         register(GameMode.CREATIVE, 1);
         register(GameMode.ADVENTURE, 2);
         register(GameMode.SPECTATOR, 3);
-
+        
         register(Difficulty.PEACEFUL, 0);
         register(Difficulty.EASY, 1);
         register(Difficulty.NORMAL, 2);
         register(Difficulty.HARD, 3);
-
+        
         register(WorldType.DEFAULT, "default");
         register(WorldType.FLAT, "flat");
         register(WorldType.LARGE_BIOMES, "largebiomes");
@@ -250,14 +253,14 @@ public class MagicValues {
         register(WorldType.CUSTOMIZED, "customized");
         register(WorldType.DEBUG, "debug_all_block_states");
         register(WorldType.DEFAULT_1_1, "default_1_1");
-
+        
         register(Animation.SWING_ARM, 0);
         register(Animation.DAMAGE, 1);
         register(Animation.LEAVE_BED, 2);
         register(Animation.EAT_FOOD, 3);
         register(Animation.CRITICAL_HIT, 4);
         register(Animation.ENCHANTMENT_CRITICAL_HIT, 5);
-
+        
         register(Effect.SPEED, 1);
         register(Effect.SLOWNESS, 2);
         register(Effect.DIG_SPEED, 3);
@@ -285,7 +288,10 @@ public class MagicValues {
         register(Effect.LEVITATION, 25);
         register(Effect.LUCK, 26);
         register(Effect.BAD_LUCK, 27);
-
+        register(Effect.SLOW_FALLING, 28);
+        register(Effect.CONDUIT_POWER, 29);
+        register(Effect.DOLPHINS_GRACE, 30);
+        
         register(EntityStatus.TIPPED_ARROW_EMIT_PARTICLES, 0);
         register(EntityStatus.RABBIT_JUMP_OR_MINECART_SPAWNER_DELAY_RESET, 1);
         register(EntityStatus.LIVING_HURT, 2);
@@ -323,15 +329,15 @@ public class MagicValues {
         register(EntityStatus.TOTEM_OF_UNDYING_MAKE_SOUND, 35);
         register(EntityStatus.LIVING_DROWN, 36);
         register(EntityStatus.LIVING_BURN, 37);
-
+        
         register(PositionElement.X, 0);
         register(PositionElement.Y, 1);
         register(PositionElement.Z, 2);
         register(PositionElement.PITCH, 3);
         register(PositionElement.YAW, 4);
-
+        
         register(GlobalEntityType.LIGHTNING_BOLT, 1);
-
+        
         register(MobType.BAT, 3);
         register(MobType.BLAZE, 4);
         register(MobType.CAVE_SPIDER, 6);
@@ -389,7 +395,7 @@ public class MagicValues {
         register(MobType.ZOMBIE_HORSE, 88);
         register(MobType.ZOMBIE_VILLAGER, 89);
         register(MobType.PHANTOM, 90);
-
+        
         register(ObjectType.BOAT, 1);
         register(ObjectType.ITEM, 2);
         register(ObjectType.AREA_EFFECT_CLOUD, 3);
@@ -418,7 +424,7 @@ public class MagicValues {
         register(ObjectType.SPECTRAL_ARROW, 91);
         register(ObjectType.DRAGON_FIREBALL, 93);
         register(ObjectType.TRIDENT, 94);
-
+        
         register(MinecartType.NORMAL, 0);
         register(MinecartType.CHEST, 1);
         register(MinecartType.POWERED, 2);
@@ -426,14 +432,14 @@ public class MagicValues {
         register(MinecartType.MOB_SPAWNER, 4);
         register(MinecartType.HOPPER, 5);
         register(MinecartType.COMMAND_BLOCK, 6);
-
+        
         register(HangingDirection.DOWN, 0);
         register(HangingDirection.UP, 1);
         register(HangingDirection.NORTH, 2);
         register(HangingDirection.SOUTH, 3);
         register(HangingDirection.WEST, 4);
         register(HangingDirection.EAST, 5);
-
+        
         register(PaintingType.KEBAB, 0);
         register(PaintingType.AZTEC, 1);
         register(PaintingType.ALBAN, 2);
@@ -460,7 +466,7 @@ public class MagicValues {
         register(PaintingType.BURNING_SKULL, 23);
         register(PaintingType.SKELETON, 24);
         register(PaintingType.DONKEY_KONG, 25);
-
+        
         register(ScoreboardPosition.PLAYER_LIST, 0);
         register(ScoreboardPosition.SIDEBAR, 1);
         register(ScoreboardPosition.BELOW_NAME, 2);
@@ -480,20 +486,20 @@ public class MagicValues {
         register(ScoreboardPosition.SIDEBAR_TEAM_LIGHT_PURPLE, 16);
         register(ScoreboardPosition.SIDEBAR_TEAM_YELLOW, 17);
         register(ScoreboardPosition.SIDEBAR_TEAM_WHITE, 18);
-
+        
         register(ObjectiveAction.ADD, 0);
         register(ObjectiveAction.REMOVE, 1);
         register(ObjectiveAction.UPDATE, 2);
-
+        
         register(TeamAction.CREATE, 0);
         register(TeamAction.REMOVE, 1);
         register(TeamAction.UPDATE, 2);
         register(TeamAction.ADD_PLAYER, 3);
         register(TeamAction.REMOVE_PLAYER, 4);
-
+        
         register(ScoreboardAction.ADD_OR_UPDATE, 0);
         register(ScoreboardAction.REMOVE, 1);
-
+        
         register(MapIconType.WHITE_ARROW, 0);
         register(MapIconType.GREEN_ARROW, 1);
         register(MapIconType.RED_ARROW, 2);
@@ -521,7 +527,7 @@ public class MagicValues {
         register(MapIconType.RED_BANNER, 24);
         register(MapIconType.BLACK_BANNER, 25);
         register(MapIconType.TREASURE_MARKER, 26);
-
+        
         register(WindowType.GENERIC_INVENTORY, "minecraft:container");
         register(WindowType.ANVIL, "minecraft:anvil");
         register(WindowType.BEACON, "minecraft:beacon");
@@ -536,9 +542,9 @@ public class MagicValues {
         register(WindowType.VILLAGER, "minecraft:villager");
         register(WindowType.SHULKER_BOX, "minecraft:shulker_box");
         register(WindowType.HORSE, "EntityHorse");
-
+        
         register(BrewingStandProperty.BREW_TIME, 0);
-
+        
         register(EnchantmentTableProperty.LEVEL_SLOT_1, 0);
         register(EnchantmentTableProperty.LEVEL_SLOT_2, 1);
         register(EnchantmentTableProperty.LEVEL_SLOT_3, 2);
@@ -546,14 +552,14 @@ public class MagicValues {
         register(EnchantmentTableProperty.ENCHANTMENT_SLOT_1, 4);
         register(EnchantmentTableProperty.ENCHANTMENT_SLOT_2, 5);
         register(EnchantmentTableProperty.ENCHANTMENT_SLOT_3, 6);
-
+        
         register(FurnaceProperty.BURN_TIME, 0);
         register(FurnaceProperty.CURRENT_ITEM_BURN_TIME, 1);
         register(FurnaceProperty.COOK_TIME, 2);
         register(FurnaceProperty.TOTAL_COOK_TIME, 3);
-
+        
         register(AnvilProperty.MAXIMUM_COST, 0);
-
+        
         register(BlockBreakStage.RESET, -1);
         register(BlockBreakStage.STAGE_1, 0);
         register(BlockBreakStage.STAGE_2, 1);
@@ -566,7 +572,7 @@ public class MagicValues {
         register(BlockBreakStage.STAGE_9, 8);
         register(BlockBreakStage.STAGE_10, 9);
         register(BlockBreakStage.RESET, 255);
-
+        
         register(UpdatedTileType.MOB_SPAWNER, 1);
         register(UpdatedTileType.COMMAND_BLOCK, 2);
         register(UpdatedTileType.BEACON, 3);
@@ -578,7 +584,7 @@ public class MagicValues {
         register(UpdatedTileType.SIGN, 9);
         register(UpdatedTileType.SHULKER_BOX, 10);
         register(UpdatedTileType.BED, 11);
-
+        
         register(ClientNotification.INVALID_BED, 0);
         register(ClientNotification.START_RAIN, 2);
         register(ClientNotification.STOP_RAIN, 1);
@@ -589,38 +595,38 @@ public class MagicValues {
         register(ClientNotification.RAIN_STRENGTH, 7);
         register(ClientNotification.THUNDER_STRENGTH, 8);
         register(ClientNotification.AFFECTED_BY_ELDER_GUARDIAN, 10);
-
+        
         register(CommandBlockMode.SEQUENCE, 0);
         register(CommandBlockMode.AUTO, 1);
         register(CommandBlockMode.REDSTONE, 2);
-
+        
         register(UpdateStructureBlockAction.UPDATE_DATA, 0);
         register(UpdateStructureBlockAction.SAVE_STRUCTURE, 1);
         register(UpdateStructureBlockAction.LOAD_STRUCTURE, 2);
         register(UpdateStructureBlockAction.DETECT_SIZE, 3);
-
+        
         register(UpdateStructureBlockMode.SAVE, 0);
         register(UpdateStructureBlockMode.LOAD, 1);
         register(UpdateStructureBlockMode.CORNER, 2);
         register(UpdateStructureBlockMode.DATA, 3);
-
+        
         register(StructureRotation.NONE, 0);
         register(StructureRotation.CLOCKWISE_90, 1);
         register(StructureRotation.CLOCKWISE_180, 2);
         register(StructureRotation.COUNTERCLOCKWISE_90, 3);
-
+        
         register(StructureMirror.NONE, 0);
         register(StructureMirror.LEFT_RIGHT, 1);
         register(StructureMirror.FRONT_BACK, 2);
-
+        
         register(DemoMessageValue.WELCOME, 0);
         register(DemoMessageValue.MOVEMENT_CONTROLS, 101);
         register(DemoMessageValue.JUMP_CONTROL, 102);
         register(DemoMessageValue.INVENTORY_CONTROL, 103);
-
+        
         register(EnterCreditsValue.SEEN_BEFORE, 0);
         register(EnterCreditsValue.FIRST_TIME, 1);
-
+        
         register(GenericStatistic.TIMES_LEFT_GAME, 0);
         register(GenericStatistic.TICKS_PLAYED, 1);
         register(GenericStatistic.TICKS_SINCE_DEATH, 2);
@@ -671,7 +677,7 @@ public class MagicValues {
         register(GenericStatistic.TIMES_CHEST_GUI_OPENED, 47);
         register(GenericStatistic.TIMES_BED_ENTERED, 48);
         register(GenericStatistic.TIMES_SHULKER_BOX_GUI_OPENED, 49);
-
+        
         register(StatisticCategory.BREAK_BLOCK, 0);
         register(StatisticCategory.CRAFT_ITEM, 1);
         register(StatisticCategory.USE_ITEM, 2);
@@ -681,7 +687,7 @@ public class MagicValues {
         register(StatisticCategory.KILL_ENTITY, 6);
         register(StatisticCategory.KILLED_BY_ENTITY, 7);
         register(StatisticCategory.GENERIC, 8);
-
+        
         register(ParticleType.AMBIENT_ENTITY_EFFECT, 0);
         register(ParticleType.ANGRY_VILLAGER, 1);
         register(ParticleType.BARRIER, 2);
@@ -732,7 +738,7 @@ public class MagicValues {
         register(ParticleType.BUBBLE_COLUMN_UP, 47);
         register(ParticleType.NAUTILUS, 48);
         register(ParticleType.DOLPHIN, 49);
-
+        
         register(NoteBlockValueType.HARP, 0);
         register(NoteBlockValueType.DOUBLE_BASS, 1);
         register(NoteBlockValueType.SNARE_DRUM, 2);
@@ -743,28 +749,28 @@ public class MagicValues {
         register(NoteBlockValueType.GUITAR, 7);
         register(NoteBlockValueType.CHIME, 8);
         register(NoteBlockValueType.XYLOPHONE, 9);
-
+        
         register(PistonValueType.PUSHING, 0);
         register(PistonValueType.PULLING, 1);
-
+        
         register(MobSpawnerValueType.RESET_DELAY, 1);
-
+        
         register(ChestValueType.VIEWING_PLAYER_COUNT, 1);
-
+        
         register(BeaconValueType.RECALCULATE_BEAM, 1);
-
+        
         register(EndGatewayValueType.TRIGGER_BEAM, 1);
-
+        
         register(GenericBlockValueType.GENERIC_0, 0);
         register(GenericBlockValueType.GENERIC_1, 1);
-
+        
         register(PistonValue.DOWN, 0);
         register(PistonValue.UP, 1);
         register(PistonValue.SOUTH, 2);
         register(PistonValue.WEST, 3);
         register(PistonValue.NORTH, 4);
         register(PistonValue.EAST, 5);
-
+        
         register(SoundEffect.BLOCK_DISPENSER_DISPENSE, 1000);
         register(SoundEffect.BLOCK_DISPENSER_FAIL, 1001);
         register(SoundEffect.BLOCK_DISPENSER_LAUNCH, 1002);
@@ -804,7 +810,7 @@ public class MagicValues {
         register(SoundEffect.BLOCK_IRON_TRAPDOOR_CLOSE, 1036);
         register(SoundEffect.BLOCK_IRON_TRAPDOOR_OPEN, 1037);
         register(SoundEffect.ENTITY_ENDERDRAGON_GROWL, 3001);
-
+        
         register(ParticleEffect.SMOKE, 2000);
         register(ParticleEffect.BREAK_BLOCK, 2001);
         register(ParticleEffect.BREAK_SPLASH_POTION, 2002);
@@ -814,7 +820,7 @@ public class MagicValues {
         register(ParticleEffect.ENDERDRAGON_FIREBALL_EXPLODE, 2006);
         register(ParticleEffect.BREAK_SPLASH_POTION, 2007);
         register(ParticleEffect.END_GATEWAY_SPAWN, 3000);
-
+        
         register(SmokeEffectData.SOUTH_EAST, 0);
         register(SmokeEffectData.SOUTH, 1);
         register(SmokeEffectData.SOUTH_WEST, 2);
@@ -824,19 +830,19 @@ public class MagicValues {
         register(SmokeEffectData.NORTH_EAST, 6);
         register(SmokeEffectData.NORTH, 7);
         register(SmokeEffectData.NORTH_WEST, 8);
-
+        
         register(NameTagVisibility.ALWAYS, "");
         register(NameTagVisibility.ALWAYS, "always");
         register(NameTagVisibility.NEVER, "never");
         register(NameTagVisibility.HIDE_FOR_OTHER_TEAMS, "hideForOtherTeams");
         register(NameTagVisibility.HIDE_FOR_OWN_TEAM, "hideForOwnTeam");
-
+        
         register(CollisionRule.ALWAYS, "");
         register(CollisionRule.ALWAYS, "always");
         register(CollisionRule.NEVER, "never");
         register(CollisionRule.PUSH_OTHER_TEAMS, "pushOtherTeams");
         register(CollisionRule.PUSH_OWN_TEAM, "pushOwnTeam");
-
+        
         register(TeamColor.BLACK, 0);
         register(TeamColor.DARK_BLUE, 1);
         register(TeamColor.DARK_GREEN, 2);
@@ -859,59 +865,59 @@ public class MagicValues {
         register(TeamColor.UNDERLINED, 19);
         register(TeamColor.ITALIC, 20);
         register(TeamColor.NONE, 21);
-
+        
         register(ScoreType.INTEGER, 0);
         register(ScoreType.HEARTS, 1);
-
+        
         register(Advancement.DisplayData.FrameType.TASK, 0);
         register(Advancement.DisplayData.FrameType.CHALLENGE, 1);
         register(Advancement.DisplayData.FrameType.GOAL, 2);
-
+        
         register(WorldBorderAction.SET_SIZE, 0);
         register(WorldBorderAction.LERP_SIZE, 1);
         register(WorldBorderAction.SET_CENTER, 2);
         register(WorldBorderAction.INITIALIZE, 3);
         register(WorldBorderAction.SET_WARNING_TIME, 4);
         register(WorldBorderAction.SET_WARNING_BLOCKS, 5);
-
+        
         register(PlayerListEntryAction.ADD_PLAYER, 0);
         register(PlayerListEntryAction.UPDATE_GAMEMODE, 1);
         register(PlayerListEntryAction.UPDATE_LATENCY, 2);
         register(PlayerListEntryAction.UPDATE_DISPLAY_NAME, 3);
         register(PlayerListEntryAction.REMOVE_PLAYER, 4);
-
+        
         register(TitleAction.TITLE, 0);
         register(TitleAction.SUBTITLE, 1);
         register(TitleAction.ACTION_BAR, 2);
         register(TitleAction.TIMES, 3);
         register(TitleAction.CLEAR, 4);
         register(TitleAction.RESET, 5);
-
+        
         register(UnlockRecipesAction.INIT, 0);
         register(UnlockRecipesAction.ADD, 1);
         register(UnlockRecipesAction.REMOVE, 2);
-
+        
         register(CraftingBookDataType.DISPLAYED_RECIPE, 0);
         register(CraftingBookDataType.CRAFTING_BOOK_STATUS, 1);
-
+        
         register(AdvancementTabAction.OPENED_TAB, 0);
         register(AdvancementTabAction.CLOSED_SCREEN, 1);
-
+        
         register(ResourcePackStatus.SUCCESSFULLY_LOADED, 0);
         register(ResourcePackStatus.DECLINED, 1);
         register(ResourcePackStatus.FAILED_DOWNLOAD, 2);
         register(ResourcePackStatus.ACCEPTED, 3);
-
+        
         register(Hand.MAIN_HAND, 0);
         register(Hand.OFF_HAND, 1);
-
+        
         register(BossBarAction.ADD, 0);
         register(BossBarAction.REMOVE, 1);
         register(BossBarAction.UPDATE_HEALTH, 2);
         register(BossBarAction.UPDATE_TITLE, 3);
         register(BossBarAction.UPDATE_STYLE, 4);
         register(BossBarAction.UPDATE_FLAGS, 5);
-
+        
         register(BossBarColor.PINK, 0);
         register(BossBarColor.CYAN, 1);
         register(BossBarColor.RED, 2);
@@ -919,13 +925,13 @@ public class MagicValues {
         register(BossBarColor.YELLOW, 4);
         register(BossBarColor.PURPLE, 5);
         register(BossBarColor.WHITE, 6);
-
+        
         register(BossBarDivision.NONE, 0);
         register(BossBarDivision.NOTCHES_6, 1);
         register(BossBarDivision.NOTCHES_10, 2);
         register(BossBarDivision.NOTCHES_12, 3);
         register(BossBarDivision.NOTCHES_20, 4);
-
+        
         register(BlockFace.DOWN, 0);
         register(BlockFace.UP, 1);
         register(BlockFace.NORTH, 2);
@@ -933,17 +939,17 @@ public class MagicValues {
         register(BlockFace.WEST, 4);
         register(BlockFace.EAST, 5);
         register(BlockFace.SPECIAL, 255);
-
+        
         register(EquipmentSlot.MAIN_HAND, 0);
         register(EquipmentSlot.OFF_HAND, 1);
         register(EquipmentSlot.BOOTS, 2);
         register(EquipmentSlot.LEGGINGS, 3);
         register(EquipmentSlot.CHESTPLATE, 4);
         register(EquipmentSlot.HELMET, 5);
-
+        
         register(FeetOrEyes.FEET, 0);
         register(FeetOrEyes.EYES, 1);
-
+        
         register(SoundCategory.MASTER, 0);
         register(SoundCategory.MUSIC, 1);
         register(SoundCategory.RECORD, 2);
@@ -954,14 +960,15 @@ public class MagicValues {
         register(SoundCategory.PLAYER, 7);
         register(SoundCategory.AMBIENT, 8);
         register(SoundCategory.VOICE, 9);
-
-        for(BuiltinSound sound : BuiltinSound.values()) {
+        
+        for (BuiltinSound sound : BuiltinSound.values()) {
             register(sound, sound.ordinal());
             register(sound, sound.name().toLowerCase().replace('_', '.'));
         }
-
+        
         // Properly register sounds that actually have names containing underscores.
-        register(BuiltinSound.AMBIENT_UNDERWATER_LOOP_ADDITIONS_ULTRA_RARE, "ambient.underwater.loop.additions.ultra_rare", true);
+        register(BuiltinSound.AMBIENT_UNDERWATER_LOOP_ADDITIONS_ULTRA_RARE,
+                "ambient.underwater.loop.additions.ultra_rare", true);
         register(BuiltinSound.BLOCK_BEACON_POWER_SELECT, "block.beacon.power_select", true);
         register(BuiltinSound.BLOCK_BREWING_STAND_BREW, "block.brewing_stand.brew", true);
         register(BuiltinSound.BLOCK_BUBBLE_COLUMN_BUBBLE_POP, "block.bubble_column.bubble_pop", true);
@@ -1226,76 +1233,74 @@ public class MagicValues {
         register(BuiltinSound.MUSIC_DISC_WARD, "music_disc.ward", true);
         register(BuiltinSound.UI_TOAST_CHALLENGE_COMPLETE, "ui.toast.challenge_complete", true);
     }
-
+    
     private static void register(Enum<?> key, Object value) {
         register(key, value, false);
     }
-
+    
     private static void register(Enum<?> key, Object value, boolean overwrite) {
-        if(!values.containsKey(key)) {
+        if (!values.containsKey(key)) {
             values.put(key, new ArrayList<Object>());
-        } else if(overwrite) {
-            for(Iterator<Object> it = values.get(key).iterator(); it.hasNext(); ) {
-                if(value.getClass().isAssignableFrom(it.next().getClass())) {
+        } else if (overwrite) {
+            for (Iterator<Object> it = values.get(key).iterator(); it.hasNext();) {
+                if (value.getClass().isAssignableFrom(it.next().getClass())) {
                     it.remove();
                 }
             }
         }
-
+        
         values.get(key).add(value);
     }
-
-    @SuppressWarnings({"unchecked"})
+    
+    @SuppressWarnings({ "unchecked" })
     public static <T> T key(Class<T> keyType, Object value) {
-        for(Object key : values.keySet()) {
-            if(keyType.isAssignableFrom(key.getClass())) {
-                for(Object val : values.get(key)) {
-                    if(val == value || val.equals(value)) {
+        for (Object key : values.keySet()) {
+            if (keyType.isAssignableFrom(key.getClass())) {
+                for (Object val : values.get(key)) {
+                    if (val == value || val.equals(value)) {
                         return (T) key;
-                    } else if(Number.class.isAssignableFrom(val.getClass()) && Number.class.isAssignableFrom(value.getClass())) {
+                    } else if (Number.class.isAssignableFrom(val.getClass())
+                            && Number.class.isAssignableFrom(value.getClass())) {
                         Number num = (Number) val;
                         Number num2 = (Number) value;
-                        if(num.doubleValue() == num2.doubleValue()) {
-                            return (T) key;
-                        }
-                    } else if(String.class.isAssignableFrom(val.getClass()) && String.class.isAssignableFrom(value.getClass())) {
+                        if (num.doubleValue() == num2.doubleValue()) { return (T) key; }
+                    } else if (String.class.isAssignableFrom(val.getClass())
+                            && String.class.isAssignableFrom(value.getClass())) {
                         String str = (String) val;
                         String str2 = (String) value;
-                        if(str.equalsIgnoreCase(str2)) {
-                            return (T) key;
-                        }
+                        if (str.equalsIgnoreCase(str2)) { return (T) key; }
                     }
                 }
             }
         }
-
-        throw new IllegalArgumentException("Value " + value + " has no mapping for key class " + keyType.getName() + ".");
+        
+        throw new IllegalArgumentException(
+                "Value " + value + " has no mapping for key class " + keyType.getName() + ".");
     }
-
+    
     @SuppressWarnings("unchecked")
     public static <T> T value(Class<T> valueType, Object key) {
-        if(values.containsKey(key)) {
-            for(Object val : values.get(key)) {
-                if(valueType.isAssignableFrom(val.getClass())) {
+        if (values.containsKey(key)) {
+            for (Object val : values.get(key)) {
+                if (valueType.isAssignableFrom(val.getClass())) {
                     return (T) val;
-                } else if(Number.class.isAssignableFrom(val.getClass())) {
-                    if(valueType == Byte.class) {
+                } else if (Number.class.isAssignableFrom(val.getClass())) {
+                    if (valueType == Byte.class) {
                         return (T) (Object) ((Number) val).byteValue();
-                    } else if(valueType == Short.class) {
+                    } else if (valueType == Short.class) {
                         return (T) (Object) ((Number) val).shortValue();
-                    } else if(valueType == Integer.class) {
+                    } else if (valueType == Integer.class) {
                         return (T) (Object) ((Number) val).intValue();
-                    } else if(valueType == Long.class) {
+                    } else if (valueType == Long.class) {
                         return (T) (Object) ((Number) val).longValue();
-                    } else if(valueType == Float.class) {
+                    } else if (valueType == Float.class) {
                         return (T) (Object) ((Number) val).floatValue();
-                    } else if(valueType == Double.class) {
-                        return (T) (Object) ((Number) val).doubleValue();
-                    }
+                    } else if (valueType == Double.class) { return (T) (Object) ((Number) val).doubleValue(); }
                 }
             }
         }
-
-        throw new IllegalArgumentException("Key " + key + " has no mapping for value class " + valueType.getName() + ".");
+        
+        throw new IllegalArgumentException(
+                "Key " + key + " has no mapping for value class " + valueType.getName() + ".");
     }
 }
