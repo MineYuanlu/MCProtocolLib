@@ -27,5 +27,8 @@ public enum Effect {
     GLOWING,
     LEVITATION,
     LUCK,
-    BAD_LUCK;
+    BAD_LUCK,
+    SLOW_FALLING,
+    CONDUIT_POWER,
+    DOLPHINS_GRACE;
 }
